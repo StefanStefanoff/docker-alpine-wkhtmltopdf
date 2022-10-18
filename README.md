@@ -10,6 +10,8 @@ wkhtmltopdf with qt patches
 
 yes, Alpine does have a wkhtmltopdf package... but it doesn't include the qt patches ... enjoy!
 
+Works on M1 macs
+
 
 ```
 # i do it myself
@@ -17,10 +19,10 @@ docker build -t alpine-wkhtmltopdf .
 docker run alpine-wkhtmltopdf google.com - > test.pdf
 
 # i'm lazy
-docker run madnight/docker-alpine-wkhtmltopdf google.com - > test.pdf
+docker run atrelios/docker-alpine-wkhtmltopdf:latest google.com - > test.pdf
 
 # or mount a local file (e.g. test.html)
-docker run --rm -v $(pwd):/data madnight/docker-alpine-wkhtmltopdf /data/test.html - > test.pdf
+docker run --rm -v $(pwd):/data atrelios/docker-alpine-wkhtmltopdf:latest /data/test.html - > test.pdf
 ```
 
 ## Q&A
